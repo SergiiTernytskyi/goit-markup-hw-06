@@ -1026,23 +1026,25 @@ body {
   border-radius: 2px;
   background-color: var(--first-bg-color);
 
-  transition: background-color 250ms var(--timing-function), border 250ms var(--timing-function),
+  transition: background-color 250ms var(--timing-function),
     border-color 250ms var(--timing-function);
 }
 
 .checkbox-icon {
   visibility: hidden;
   fill: var(--first-bg-color);
-  transition: visibility 250ms var(--timing-function);
+  opacity: 0;
+  transition: visibility 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 
 .modal-chechbox:checked + .checkbox-box {
-  border: transparent;
+  border-color: transparent;
   background-color: var(--accent-color);
 }
 
 .modal-chechbox:checked + .checkbox-box .checkbox-icon {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal-chechbox:focus + .checkbox-box {
